@@ -1,0 +1,17 @@
+body {
+    width: 500px;
+    margin: 20px auto;
+}
+
+.task-done, .task-done:hover {
+    text-decoration: line-through;
+    color: darkgray;
+}
+
+.task-defalut, .task-defalut:hover {
+    text-decoration: none;
+}
+
+.container-fill {
+    padding: 2px 2px 2px 2px;
+}

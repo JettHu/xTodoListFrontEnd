@@ -16,4 +16,4 @@
 
 ## 前端功能截图
 
- ![image](https://github.com/JettHu/xTodoListFrontEnd/功能截图.gif)
+ ![image](https://github.com/JettHu/xTodoListFrontEnd/raw/master/功能截图.gif)

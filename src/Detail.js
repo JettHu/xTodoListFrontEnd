@@ -47,7 +47,7 @@ class TaskDetail extends Component {
     }
 
     handleChange = event => {
-        const target = event.target
+        const target = event.target;
         const { name } = target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
         this.setState({

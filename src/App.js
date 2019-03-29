@@ -20,7 +20,7 @@ function App() {
 
 function Header() {
     return (
-        
+
         <nav>
             <ol className="breadcrumb">
                 <li className="breadcrumb-item">
@@ -36,14 +36,14 @@ class Home extends Component {
         super(props);
 
         this.state = {
-            tasks: []
+            tasks: [],
         };
     }
 
     render() {
         return (
             <div className="container container-fill">
-                <Table tasks={this.state.tasks} removeTask={this.removeTask} finishTask={this.finishTask} />
+                <Table tasks={this.state.tasks} removeTask={this.removeTask} finishTask={this.finishTask} SortTasks={this.SortTasks} />
                 {/* <TaskList tasks={this.state.tasks} removeTask={this.removeTask} finishTask={this.finishTask} /> */}
                 <NewTaskForm handleSubmit={this.handleSubmit} />
             </div>
@@ -79,8 +79,6 @@ class Home extends Component {
                 this.setState({ tasks: tasks });
             }
         }).catch(err => console.error(err))
-
-
     }
 
     finishTask = index => {
@@ -100,7 +98,7 @@ class Home extends Component {
             if (response.status === 200) {
                 // TODO 修改成功
                 console.log("修改成功")
-                
+
             }
         }).catch(err => console.error(err))
         this.setState({ tasks: tasks });
@@ -125,8 +123,23 @@ class Home extends Component {
             task = result;
             this.setState({ tasks: [...this.state.tasks, task] });
         }).catch(err => console.error(err))
+    }
 
-
+    SortTasks = sort_type => {
+        let tasks = this.state.tasks;
+        switch (sort_type) {
+            case 0: break;
+            case 1:
+                tasks.sort((a, b) => b.priority - a.priority)
+                tasks.sort((a, b) => a.done - b.done)
+                break;
+            case 2:
+                tasks.sort((a, b) => new Date(a.expire_date) - new Date(b.expire_date))
+                tasks.sort((a, b) => a.done - b.done)
+                break;
+            default: break;
+        }
+        this.setState({ tasks: tasks });
     }
 }
 export default App

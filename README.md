@@ -16,5 +16,9 @@
 
 ## 前端功能截图
 
+### 主要功能
  ![image](https://github.com/JettHu/xTodoListFrontEnd/raw/master/功能截图.gif)
+
+### [新增]排序功能
+ ![image](https://github.com/JettHu/xTodoListFrontEnd/raw/master/排序功能.gif)
 

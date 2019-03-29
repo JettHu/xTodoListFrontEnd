@@ -1,5 +1,7 @@
 # xTodo List前端
 
+> [后端repositories](https://github.com/JettHu/xTodoList)
+
 ## 基本功能
 - [x] 增加一个待办事项
 - [x] 删除一个待办事项
